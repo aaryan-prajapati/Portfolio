@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aryan's - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body{
+        background-color: rgb(2, 2, 63);
+        color: wheat;
+        font-family: "Poppins", sans-serif;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 80px;
+        background-color: rgb(4, 1, 41);
+      }
+
+      nav ul {
+        display: flex;
+        justify-content: center;
+        
+      }
+
+      nav ul li {
+        list-style: none;
+        margin: 23px;
+        
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: wheat;
+      }
+
+      nav ul li a:hover {
+        color: rgb(60, 20, 222);
+        font-size: 1.2rem;
+      }
+
+      .left {
+        font-size: 2rem;
+      }
+
+      .firstSection {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 80px;
+      }
+
+      .firstSection > div {
+        width: 40%;
+      }
+
+      .leftSection {
+        font-size: 3rem;
+        margin: 30px;
+      }
+
+      .yello {
+        color: rgb(223, 223, 11);
+      }
+
+      .text-gray {
+        color: gray;
+      }
+
+      #element {
+        color: rgb(223, 223, 11);
+      }
+
+      .rightSection {
+        width: 35px;
+      }
+
+      .rightSection img {
+        width: 100%;
+        margin: 50px;
+      }
+
+      main hr {
+        border: 0;
+        background: rgb(60, 53, 140);
+        height: 2px;
+        margin: 40px 84px;
+      }
+
+      .aboutSection {
+        max-width: 80vw;
+        margin: auto;
+        padding: 40px 0;
+      }
+
+      .aboutSection h2 {
+        font-size: 1.5rem;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .aboutSection hr {
+        border: 0;
+        background: rgb(60, 53, 140);
+        height: 2px;
+        margin: 40px 90px;
+      }
+
+      .aboutContent {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 20px;
+      }
+
+      .aboutContent .leftSection {
+        width: 45%;
+        font-size: 1rem;
+      }
+
+      .aboutContent .buttons {
+        display: flex;
+        gap: 20px; /* Space between the buttons */
+        padding: 20px 0;
+      }
+
+      .aboutContent .btn {
+        flex: 1; /* Make buttons take equal space */
+        padding: 12px;
+        background: #06073b;
+        color: white;
+        border: 2px solid white;
+        border-radius: 6px;
+        font-size: 20px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+      }
+
+      .aboutContent .rightSection {
+        width: 35%;
+      }
+
+      .aboutContent img {
+        width: 100%;
+        border-radius: 10px;
+      }
+      .skillsSection {
+        max-width: 80vw;
+        margin: auto;
+        padding: 40px 0;
+      }
+
+      .skillsSection h2 {
+        font-size: 1.5rem;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .skillsSection hr {
+        border: 0;
+        background: rgb(60, 53, 140);
+        height: 2px;
+        margin: 40px 90px;
+      }
+
+      .skillsContent {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+      }
+
+      .skillsContent ul {
+        list-style-type: disc;
+        padding: 0;
+        margin: 0;
+        text-align: left;
+      }
+
+      .skillsContent li {
+        font-size: 1.2rem;
+        margin: 10px 0;
+      }
+
+      .projectSection {
+        max-width: 80vw;
+        margin: auto;
+        padding: 40px 0;
+      }
+
+      .projectSection h2 {
+        font-size: 1.5rem;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .projectGallery {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 20px;
+      }
+
+      .projectItem {
+        width: 30%;
+        cursor: pointer;
+      }
+
+      .projectItem img {
+        width: 100%;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+      }
+
+      .projectItem img:hover {
+        transform: scale(1.1);
+      }
+
+      .projectDetails {
+        display: none;
+      }
+
+      .projectDetails h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+      }
+
+      .projectDetails p {
+        font-size: 1rem;
+      }
+      
+      .projectDetails hr {
+        border: 0;
+        background: rgb(52, 44, 142);
+        height: 2px;
+        margin: 40px 84px;
+      }
+
+      .contactSection {
+        max-width: 80vw;
+        margin: auto;
+        padding: 40px 0;
+      }
+
+      .contactSection h2 {
+        font-size: 1.5rem;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      #contactForm {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .formGroup {
+        margin-bottom: 20px;
+      }
+
+      label {
+        font-weight: bold;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        width: 100%;
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid #55b0c9;
+        border-radius: 5px;
+      }
+
+      button[type="submit"] {
+        width: 150px;
+        padding: 10px;
+        background-color: #cebf1a;
+        color: rgb(249, 12, 12);
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+
+      button[type="submit"]:hover {
+        background-color: #040536;
+      }
+
+      footer {
+        background-color: rgb(4, 1, 41);
+      }
+
+      .footerContainer {
+        width: 100%;
+        padding: 70px 30px 20px;
+      }
+
+      .socialIcons {
+        display: flex;
+        justify-content: center;
+      }
+
+      .socialIcons a {
+        text-decoration: none;
+        padding: 10px;
+        background-color: white;
+        margin: 10px;
+        border-radius: 50%;
+      }
+
+      .socialIcons a i {
+        font-size: 2em;
+        color: blue;
+        opacity: 0.9;
+      }
+
+      .socialIcons a:hover {
+        background-color: #111;
+        transform: 0.5s;
+      }
+
+      .socialIcons a:hover i {
+        background-color: #111;
+        transform: 0.5s;
+      }
+
+      .footerBottom {
+        background-color: rgb(0, 0, 255);
+        padding: 20px;
+        text-align: center;
+      }
+
+      .footerBottom P {
+        color:white;
+      }
+
+      .Designer {
+        opacity: 0.7;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 400;
+        margin: 0px 5px;
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <header>
+      <nav>
+        <div class="left">Aryan's Portfolio</div>
+        <div class="right">
+          <ul>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#skills">SKILLS</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#contact">CONTACT ME</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    
+    <main>
+      <section id="Home" class="firstSection">
+        <div class="leftSection">
+          I'm <span class="yello">Aryan Prajapati</span>
+          <div>Student at <span class="yello">L.D.C.E</span> </div>
+          <span id="element"></span> 
+        </div>
+        <div class="rightSection">
+          <img src="ES.png" alt="" />
+        </div>
+      </section>
+      <hr>
+
+    </main>
+
+
+    <section id="about" class="aboutSection">
+      <h2>About Me</h2>
+      <div class="aboutContent">
+        <div class="leftSection">
+          <p>
+            I started coding during my college days. First, I learned C programming to program microcontrollers, and then I started web development in my 3rd year of college.
+          </p>
+          <div class="buttons">
+            <a href="RESUME_Aryan.pdf" class="btn" download="RESUME_Aryan">Download Resume</a>
+            <a href="#contact" class="btn">Contact Me</a> <!-- Link to the Skills section -->
+          </div>
+        </div>
+        <div class="rightSection">
+          <img src="pfl.png" alt="Profile Picture" />
+        </div>
+      </div>
+      <hr>
+    </section>
+
+    <section id="skills" class="skillsSection">
+      <h2>Skills</h2>
+      <div class="skillsContent">
+        <ul>
+          <li>Programming Language: C, Python</li>
+          <li>Front-End Development (HTML, CSS)</li>
+          <li>Microcontroller Programming</li>
+          <li>Web Development</li>
+          <li>Embedded Systems</li>
+          <li>Tools: Git, GitHub, VS Code, LTspice, Microwind, Arduino IDE </li>
+            
+        </ul>
+       
+      </div>
+      <hr>
+    </section>
+    
+    
+    
+    
+    <section id="projects" class="projectSection">
+      <h2>Projects</h2>
+      <div class="projectGallery">
+        <div class="projectItem" onclick="showProjectDetails(1)">
+          <img src="ALST.jpg" alt="Project 1" />
+        </div>
+        <div class="projectItem" onclick="showProjectDetails(2)">
+          <img src="FHAM.jpg" alt="Project 2" />
+        </div>
+        <div class="projectItem" onclick="showProjectDetails(3)">
+          <img src="SGH.jpg" alt="Project 3" />
+        </div>
+      </div>
+      <div class="projectDetails" id="projectDetails">
+        <h3 id="projectTitle">Project Title</h3>
+        <p id="projectDescription">Project Description</p>
+      </div>
+      <hr>
+    </section>
+
+    <section id="contact" class="contactSection">
+      <h2>Contact Me</h2>
+      <form id="contactForm">
+        <div class="formGroup">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="formGroup">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="formGroup">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  
+    <footer>
+      <div class="footerContainer">
+        <div class="socialIcons">
+          <a href="https://www.instagram.com/aaryan.prajapati.13/"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="https://www.facebook.com/aryank.prajapati.5"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://youtube.com/@shortsindia7865?si=df_Z33-Si_GN4Ya3"
+            ><i class="fa-brands fa-youtube"></i
+          ></a>
+          <a href="https://github.com/aaryan-prajapati"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+        </div>
+
+        <div class="footerBottom">
+          <p>
+            Copyight &copy;2024; Designed by
+            <span class="Designer">Aryan</span>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script>
+      var typed = new Typed("#element", {
+        strings: ["<i> and I'm a Learner </i> "],
+        typeSpeed: 100,
+      });
+    </script>
+    
+    <script>
+      function showProjectDetails(projectId) {
+        var title, description;
+        switch (projectId) {
+          case 1:
+            title = "Automatic Load Sharing Transformer using arduino uno";
+            description = "Designed a system to balance electrical load among transformers automatically, improving power distribution efficiency and reliability.";
+            break;
+          case 2:
+            title = "Full Home Automation Using Nodemcu ESP 8266";
+            description = "Created a comprehensive home automation system allowing remote control of lights, appliances, and security via a smartphone app, increasing convenience and energy efficiency.";
+            break;
+          case 3:
+            title = "Smart Plantation using NODMCU ESP 8266";
+            description = "Developed an automated greenhouse system that monitors and controls environmental conditions for optimal plant growth, enhancing agricultural productivity.";
+            break;
+          default:
+            title = "Project Title";
+            description = "Project Description.";
+        }
+
+        document.getElementById("projectTitle").innerText = title;
+        document.getElementById("projectDescription").innerText = description;
+        document.getElementById("projectDetails").style.display = "block";
+      }
+
+    </script>
+
+  </body>
+
+</html>
